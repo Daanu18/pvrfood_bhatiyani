@@ -1,0 +1,16 @@
+# Ignore Python virtual environment folder
+venv/
+
+# Ignore Python bytecode and caches
+__pycache__/
+*.pyc
+
+# Ignore local SQLite database file
+pvrfood.db
+
+# Ignore environment files
+.env
+
+# Ignore any build or dist folders if present
+build/
+dist/
