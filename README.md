@@ -76,7 +76,7 @@ pvrfood_bhatiyani/
 
 cd frontend
 npm install # Install dependencies
-npm start # Start development server (usually http://localhost:5173)
+npm start # Start development server (usually http://localhost:8080)
 
 
 ### Backend
