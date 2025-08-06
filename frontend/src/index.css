@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cinema Dark Theme */
+    --background: 219 20% 8%;
+    --foreground: 45 100% 96%;
+
+    --card: 219 18% 12%;
+    --card-foreground: 45 100% 96%;
+
+    --popover: 219 18% 12%;
+    --popover-foreground: 45 100% 96%;
+
+    --primary: 45 92% 55%;
+    --primary-foreground: 219 20% 8%;
+
+    --secondary: 219 15% 18%;
+    --secondary-foreground: 45 100% 96%;
+
+    --muted: 219 15% 15%;
+    --muted-foreground: 45 20% 70%;
+
+    --accent: 45 92% 55%;
+    --accent-foreground: 219 20% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 100% 96%;
+
+    --border: 219 15% 20%;
+    --input: 219 15% 15%;
+    --ring: 45 92% 55%;
+
+    --radius: 0.75rem;
+
+    /* Cinema specific colors */
+    --cinema-gold: 45 92% 55%;
+    --cinema-gold-dark: 45 92% 45%;
+    --cinema-dark: 219 20% 8%;
+    --cinema-dark-light: 219 18% 12%;
+    --cinema-grey: 219 15% 18%;
+    --cinema-text: 45 100% 96%;
+    --cinema-text-muted: 45 20% 70%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(45 92% 55%), hsl(45 92% 45%));
+    --gradient-dark: linear-gradient(135deg, hsl(219 20% 8%), hsl(219 18% 12%));
+    --gradient-card: linear-gradient(145deg, hsl(219 18% 12%), hsl(219 15% 15%));
+
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(45 92% 55% / 0.3);
+    --shadow-card: 0 4px 20px hsl(219 20% 4% / 0.5);
+    --shadow-floating: 0 8px 40px hsl(219 20% 4% / 0.8);
+
+    --sidebar-background: 219 18% 12%;
+    --sidebar-foreground: 45 100% 96%;
+    --sidebar-primary: 45 92% 55%;
+    --sidebar-primary-foreground: 219 20% 8%;
+    --sidebar-accent: 219 15% 18%;
+    --sidebar-accent-foreground: 45 100% 96%;
+    --sidebar-border: 219 15% 20%;
+    --sidebar-ring: 45 92% 55%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+}
+
+@layer components {
+  .cinema-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .cinema-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+  
+  .cinema-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .cinema-floating {
+    box-shadow: var(--shadow-floating);
+  }
+  
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
