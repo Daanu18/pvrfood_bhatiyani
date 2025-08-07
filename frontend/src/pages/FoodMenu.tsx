@@ -20,6 +20,9 @@ interface CartItem {
 type AppState = "login" | "menu" | "cart" | "payment" | "success";
 
 export const FoodMenu = () => {
+  // Use environment variable for backend URL; fallback to localhost for dev
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const [currentState, setCurrentState] = useState<AppState>("login");
   const [userDetails, setUserDetails] = useState<UserDetails | null>(null);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -38,7 +41,7 @@ export const FoodMenu = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch("http://127.0.0.1:8000/food/");
+        const response = await fetch(`${apiUrl}/food/`);
         if (!response.ok) {
           throw new Error(`Failed to fetch food items: ${response.statusText}`);
         }
@@ -57,7 +60,7 @@ export const FoodMenu = () => {
     };
 
     if (currentState === "menu") fetchFoodItems();
-  }, [currentState, toast]);
+  }, [currentState, toast, apiUrl]);
 
   /**
    * Handles login, sets user details and navigates to menu state.
@@ -135,7 +138,7 @@ export const FoodMenu = () => {
           status: "pending",
         };
 
-        const response = await fetch("http://127.0.0.1:8000/orders/", {
+        const response = await fetch(`${apiUrl}/orders/`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(orderPayload),
