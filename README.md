@@ -127,3 +127,30 @@ Integrated using `Chart.js` via `react-chartjs-2`, displayed on the main menu pa
 - You can preview the food items, add to cart, proceed to payment, and simulate a checkout flow.
 - Orders are saved in the backend and tied to the user’s email and seat info.
 - App uses `.env` variable (`VITE_API_URL`) to dynamically connect to backend.
+
+---
+
+## 🔮 Future Scope
+
+### 👨‍🍳 Staff Login & Admin Panel
+Enable cinema staff to securely log in and manage incoming orders.
+- Role-based access for staff
+- Dashboard to update order status (Preparing, Delivered)
+- View orders by screen, seat, time
+
+### 📩 Order Confirmation via SMS and Email
+Notify customers instantly after placing an order.
+- Use **SendGrid** or **Mailgun** for email
+- Use **Twilio** or **Fast2SMS** for SMS
+
+### 💳 Payment Gateway Integration
+Allow customers to pay online via UPI, cards, wallets.
+- Integrate **Razorpay** (India) or **Stripe**
+- Confirm order post-payment and notify user
+
+### 🛠️ Other Enhancements
+- Track order status (e.g., Preparing → Delivered)
+- Estimated delivery time UI
+- OTP or mobile login for users
+- Receipts for past orders
+- Manage staff accounts (add/remove/view)
