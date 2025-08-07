@@ -1,69 +1,69 @@
-# AI Prompts Used — Bhatiyani Assessment
+# 🤖 prompts.md – AI Usage Documentation
 
-This document lists all the AI prompts and tools used during development, in compliance with the Bhatiyani assessment rules.
-
----
-
-### ✅ Prompt 1: Project Planning
-**Prompt:**  
-> "Suggest a project idea for a seat-based food ordering system for cinemas."
-
-**Purpose:**  
-To define the structure and functionality of the food ordering system with seat selection.
+This file documents all the AI-related prompts and tools used during the development of the `pvrfood_bhatiyani` full-stack assessment project.
 
 ---
 
-### ✅ Prompt 2: React Component Design
-**Prompt:**  
-> "Generate a responsive card component using shadcn/ui and Tailwind CSS."
+## 📌 Purpose
 
-**Purpose:**  
-To create reusable UI components for food items.
+As required in the Bhatiyani assessment, this document tracks the use of AI tools like ChatGPT and GitHub Copilot to assist with design decisions, implementation logic, error resolution, and deployment processes.
 
 ---
 
-### ✅ Prompt 3: Cart and Checkout Flow
-**Prompt:**  
-> "How to manage cart state in React using context or hooks?"
+## 🧠 AI Tools Used
 
-**Purpose:**  
-To implement cart functionality for food selection and order placement.
-
----
-
-### ✅ Prompt 4: JSON Server Setup
-**Prompt:**  
-> "How to use JSON Server to mock food menu data for React?"
-
-**Purpose:**  
-To simulate backend responses for development.
+| Tool        | Purpose                                              |
+|-------------|------------------------------------------------------|
+| ChatGPT     | Architecture planning, React structure, Flask CRUD setup, Vite config help, Chart.js integration, README creation, and debugging help |
+| GitHub Copilot | Auto-generating repetitive component boilerplate and basic UI logic suggestions |
 
 ---
 
-### ✅ Prompt 5: Python Backend CRUD
-**Prompt:**  
-> "Create a Flask API for orders with CRUD operations."
+## 💬 Prompts Log
 
-**Purpose:**  
-To build backend logic for storing and retrieving orders.
+### ✅ Frontend (React + Vite)
+- **Prompt:** "Generate a React component for a food item card with add-to-cart button using Tailwind."  
+  *Used for:* `FoodItem.tsx` component UI.
+  
+- **Prompt:** "How do I manage multiple UI views in a single React component using state?"  
+  *Used for:* Switching between login, menu, cart, payment, success in `FoodMenu.tsx`.
+
+- **Prompt:** "How to use Chart.js in React with dynamic food stats?"  
+  *Used for:* `FoodStats.tsx` chart integration.
+
+- **Prompt:** "Fix ReferenceError: Can't find variable: process in Vite React app."  
+  *Used for:* Switching to `import.meta.env.VITE_API_URL` usage.
+
+### ✅ Backend (Flask)
+- **Prompt:** "Generate a Flask API with POST and GET endpoints for food orders."  
+  *Used for:* Creating endpoints in `app.py`.
+
+- **Prompt:** "How to connect frontend (React) with Flask backend using fetch?"  
+  *Used for:* Implementing API requests in `submitOrder` and `fetchFoodItems`.
+
+### ✅ Deployment
+- **Prompt:** "How to deploy Vite React app to Netlify with env variables?"  
+  *Used for:* Final deployment setup.
+
+- **Prompt:** "How to deploy Flask API to Render with public API endpoint?"  
+  *Used for:* Publishing backend on Render.
+
+### ✅ Documentation & Repo Structure
+- **Prompt:** "Create a complete README.md for a full-stack React + Flask app with shadcn UI and Chart.js."  
+  *Used for:* Final README file.
+
+- **Prompt:** "Write prompts.md file listing all AI prompts used in this project."  
+  *Used for:* This file itself 😄
 
 ---
 
-### ✅ Prompt 6: Deployment Guidance
-**Prompt:**  
-> "Best way to deploy Flask backend and React frontend for free."
+## 📎 Notes
 
-**Purpose:**  
-To deploy the project using platforms like Render and Netlify.
+- AI tools were used to **accelerate development**, not replace manual effort.
+- All critical logic was reviewed, modified, and tested manually.
 
 ---
 
-### ✅ Prompt 7: README.md creation
-**Prompt:**  
-> "Generate a professional README.md file for a full stack food ordering system."
+## 👨‍💻 Maintainer
 
-**Purpose:**  
-To document the project in a presentable and complete format.
-
----
-
+**Daanu** – [https://github.com/Daanu18](https://github.com/Daanu18)
